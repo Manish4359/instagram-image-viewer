@@ -1,37 +1,55 @@
-.login-container{
-  
-    width: 50%;
+.login-container {
+    width: 40%;
+    max-width: 35rem;
     padding: 4rem;
-    margin: 1rem;
-border-radius: 0.5rem;
+    margin: auto;
+    border-radius: 0.5rem;
     box-shadow: 2px 2px 5px rgb(207, 207, 207);
-
+    
 }
 
-.login-heading{
+.login-heading {
     text-transform: uppercase;
     text-align: left;
     font-size: 2rem;
     font-weight: 400;
 }
 
-.login-form{
+.login-form {
     display: flex;
     flex-direction: column;
 }
 
 input{
     border: none;
-    border-bottom: 1px solid black;
-    margin-bottom: 4rem;
+    border-bottom: 1px solid grey;
+    color: grey;
+    margin-top: 2.5rem;
+    
 }
 
-input:focus{
+.error{
+
+    color: red;
+}
+
+.login-error{
+    margin-bottom: 1rem;
+}
+
+.login-form input:not(:last-child){
+}
+
+
+
+input:focus {
     outline: none;
-    border-bottom-color:  #3F51B5;
+    border-bottom-width: 2px;
+    border-bottom-color: #3F51B5;
+    color: black;
 }
 
-.login-btn{
+.login-btn {
     text-transform: uppercase;
     width: fit-content;
     border: none;
@@ -40,5 +58,12 @@ input:focus{
     padding: 0.7rem 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
-    box-shadow: 1px 1px 2px rgb(197, 197, 197);
+    box-shadow: 1px 1px 1px rgb(210, 210, 210);
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    transform: translateX(-2px) translateY(-2px);
+    box-shadow: 3px 3px 1px rgb(210, 210, 210);
+
 }
