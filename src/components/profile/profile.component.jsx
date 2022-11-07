@@ -1,11 +1,12 @@
 import React from 'react'
 import './profile.styles.css'
-
+import EditIcon from '@mui/icons-material/Edit';
 function UserProfile() {
+
   return (
     <>
     <div className="profile-container">
-      <img src="" alt="" className='profile-image' />
+      <img src="https://xsgames.co/randomusers/avatar.php?g=male" alt="" className='profile-image' />
       <div className="profile-details">
         <p className='profile-name'>manish</p>
         <div className="profile-stats">
@@ -15,7 +16,7 @@ function UserProfile() {
         </div>
         <div className="profile-desc">
           <span className="desc">upgrad edu</span>
-          <button className='edit-profile-desc'>edit</button>
+          <div className='edit-profile-desc'><EditIcon fontSize='large' sx={{ color:'white' }}/></div>
         </div>
       </div>
     </div>

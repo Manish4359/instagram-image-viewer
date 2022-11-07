@@ -2,9 +2,11 @@ import React from 'react'
 import './header.styles.css'
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-function Header({ path }) {
+import { useLocation, useNavigate } from 'react-router-dom';
+function Header() {
 
+  const {pathname}=useLocation();
+  console.log(pathname)
   const [viewProfileOptions, setViewProfileOptions] = useState(false);
   const [searchText, setSearchText] = useState('')
 
@@ -13,8 +15,8 @@ function Header({ path }) {
   return (
     <div className='header'>
       <h1 className='header-logo'>Image viewer</h1>
-      {path === '/home' ? <div className='search-box'><SearchIcon style={{ padding: '5px', color: 'black' }} /><input type="text" placeholder='search' /></div> : <></>}
-      {path === '/home' || path==='/profile' ? <div className='user-profile' onClick={() => setViewProfileOptions(prevState => !prevState)}>
+      {pathname === '/home' ? <div className='search-box'><SearchIcon style={{ padding: '5px', color: 'black' }} /><input type="text" placeholder='search' /></div> : <></>}
+      {pathname=== '/home' || pathname==='/profile' ? <div className='user-profile' onClick={() => setViewProfileOptions(prevState => !prevState)}>
         {viewProfileOptions ? <ul className='user-profile-options'>
           <li onClick={() => navigate('/profile', {
             replace: true

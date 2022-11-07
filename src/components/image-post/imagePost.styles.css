@@ -1,5 +1,6 @@
 .post-container {
     display: flex;
+    height: fit-content;
     flex-direction: column;
     margin: 1rem;
     padding: 2rem;
@@ -12,7 +13,7 @@ hr {
 }
 
 .post-image {
-    max-width: 50rem;
+    max-width: 40rem;
     margin: 1rem 0;
 }
 
@@ -30,15 +31,23 @@ hr {
 
 .post-likes {
     display: flex;
-    align-items: center;
     margin: 1rem 0;
     font-size: 16px;
+    align-items: center;
 }
 
 .post-likes span {
     margin-left: 1rem;
+    align-self: flex-start;
 }
 
+.post-comments{
+    font-size: 18px;
+}
+
+.post-comments p{
+margin: 0.5rem 0;
+}
 .post-add-comment {
     display: flex;
     align-items: flex-end;

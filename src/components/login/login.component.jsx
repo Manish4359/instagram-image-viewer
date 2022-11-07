@@ -10,6 +10,11 @@ import { useEffect } from 'react';
 
 function Login() {
 
+
+    /*
+    username - manish
+    password - 123456
+    */
     const [loggedIn, setLoggedIn] = useState(false)
     const navigate = useNavigate()
     const userameRef = useRef();

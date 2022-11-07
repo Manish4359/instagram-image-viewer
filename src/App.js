@@ -10,12 +10,12 @@ function App() {
     <div className="App">
 
       <BrowserRouter>
-      
+      <Header/>
         <Routes>
   
-          <Route path='/' element={<><Header path={'/'}/><Login /></>} />
-          <Route  path='/home' element={<><Header path={'/home'}/><Home /></>} />
-          <Route  path='/profile' element={<><Header path={'/profile'}/><UserProfile /></>} />
+          <Route path='/' element={<Login />} />
+          <Route  path='/home' element={<Home />} />
+          <Route  path='/profile' element={<UserProfile />} />
           
         </Routes>
       </BrowserRouter>
